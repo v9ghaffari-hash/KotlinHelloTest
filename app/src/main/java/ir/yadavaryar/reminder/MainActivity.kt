@@ -37,7 +37,7 @@ class MainActivity : Activity() {
         NotificationHelper.createChannels(this)
 
         val scroll = ScrollView(this).apply {
-            fillViewport = true
+            setFillViewport(true)
             setBackgroundColor(color("#F4F7F2"))
         }
         page = LinearLayout(this).apply {
@@ -163,7 +163,7 @@ class MainActivity : Activity() {
 
         val titleInput = EditText(this).apply {
             hint = if (isAlarm) "عنوان زنگ؛ مثلاً بیدار شدن" else "نام عمل؛ مثلاً خواندن دعای عهد"
-            singleLine = true
+            setSingleLine(true)
             textDirection = View.TEXT_DIRECTION_RTL
             textAlignment = View.TEXT_ALIGNMENT_VIEW_START
             imeOptions = EditorInfo.IME_ACTION_NEXT
